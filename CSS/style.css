@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    overflow: hidden;
+}
+.road{
+    width: 10000vw;
+    height: 100vh;
+    background-image: url(/Images&Sound/road.jpg);
+    background-repeat:repeat-x;
+    position:absolute;
+    background-size: 100vw;
+    animation: move linear 3s infinite reverse;
+}
+.car{
+    width: 50vw;
+    height: 40vh;
+    background-image: url(/Images&Sound/car.png);
+    background-size: 40vw;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 5px;
+    left: 20vw;
+    /* If you want to shake the car upward and downward while it is moving*/
+    /* animation: shake linear 1s infinite ; */
+}
+.wheel1 img{
+    height: 92px;
+position: relative;
+left: 6.1vw;
+bottom: -59px;
+animation: rotateWheel linear .1s infinite reverse;
+}
+.wheel2 img{
+    height: 92px;
+position: relative;
+left: 30.3vw;
+bottom: 41px;
+animation: rotateWheel linear .1s infinite reverse;
+}
+@keyframes rotateWheel {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes move {
+    100%{
+        transform: translateX(-500vw);
+    }
+}
+@keyframes shake{
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+ /* For making rain  */
+/*
+#rain1{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(drop.png);
+    background-repeat: no-repeat;
+    position:absolute;
+    background-size: 1vw;
+    left: 1vw;
+    animation: moveRain linear .1s infinite;
+}
+#rain2{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(drop.png);
+    background-repeat: no-repeat;
+    position:absolute;
+    background-size: 2vw;
+    left: 2vw;
+    animation: moveRain linear .2s infinite;
+}
+#rain3{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(drop.png);
+    background-repeat: no-repeat;
+    position:absolute;
+    background-size: 2vw;
+    left: 10vw;
+    animation: moveRain linear .1s infinite;
+}
+#rain4{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(drop.png);
+    background-repeat: no-repeat;
+    position:absolute;
+    background-size: 1vw;
+    left: 7vw;
+    animation: moveRain linear .3s infinite;
+}
+#rain5{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(drop.png);
+    background-repeat: no-repeat;
+    position:absolute;
+    background-size: 1vw;
+    left: 270px;
+    animation: moveRain linear .2s infinite;
+}
+#rain6{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(drop.png);
+    background-repeat: no-repeat;
+    position:absolute;
+    background-size: 2vw;
+    left: 350px;
+    animation: moveRain linear .4s infinite;
+}
+#rain7{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(drop.png);
+    background-repeat: no-repeat;
+    position:absolute;
+    background-size: 1.8vw;
+    left: 400px;
+    animation: moveRain linear .1s infinite;
+}
+#rain8{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(drop.png);
+    background-repeat: no-repeat;
+    position:absolute;
+    background-size: 2vw;
+    left: 50vw;
+    animation: moveRain linear .8s infinite;
+}
+#rain9{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(drop.png);
+    background-repeat: no-repeat;
+    position:absolute;
+    background-size: 1.7vw;
+    left: 55vw;
+    animation: moveRain linear .6s infinite;
+}
+#rain10{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(drop.png);
+    background-repeat: no-repeat;
+    position:absolute;
+    background-size: 1.5vw;
+    left: 60vw;
+    animation: moveRain linear .4s infinite;
+}
+#rain11{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(drop.png);
+    background-repeat: no-repeat;
+    position:absolute;
+    background-size: 1.5vw;
+    left: 69vw;
+    animation: moveRain linear .6s infinite;
+}
+#rain12{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(drop.png);
+    background-repeat: no-repeat;
+    position:absolute;
+    background-size: 2vw;
+    left: 74vw;
+    animation: moveRain linear .7s infinite;
+}
+#rain13{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(drop.png);
+    background-repeat: no-repeat;
+    position:absolute;
+    background-size: 1.7vw;
+    left: 80vw;
+    animation: moveRain linear .8s infinite;
+}
+#rain14{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(drop.png);
+    background-repeat: no-repeat;
+    position:absolute;
+    background-size: 1vw;
+    left: 89vw;
+    animation: moveRain linear .3s infinite;
+}
+#rain15{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(drop.png);
+    background-repeat: no-repeat;
+    position:absolute;
+    background-size: 2vw;
+    left: 94vw;
+    animation: moveRain linear .5s infinite;
+}
+#rain16{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(drop.png);
+    background-repeat: no-repeat;
+    position:absolute;
+    background-size: 1.5vw;
+    left: 98vw;
+    animation: moveRain linear .8s infinite;
+}
+*/
+/*
+@keyframes moveRain{
+    100%{
+        transform: translateY(500px);
+    }
+}
+*/
